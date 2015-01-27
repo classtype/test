@@ -1,4 +1,4 @@
-var IP = require('os').networkInterfaces().eth0[0].address;
+var IP = require('os').networkInterfaces()['venet0:0'][0].address;
 var http = require('http');
 
 http.createServer(function (req, res) {
