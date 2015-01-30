@@ -1,7 +1,7 @@
 var spawn = require('child_process').spawn;
 
 
-var child = spawn('ssh', ['-o', 'StrictHostKeyChecking=no', 'root@109.234.154.170']);
+var child = spawn('ssh', ['-t', '-o', 'StrictHostKeyChecking=no', 'root@109.234.154.170']);
 
 child.stdout.on('data', function (data) {
     console.log('stdout: ' + data);
